@@ -6,23 +6,23 @@
 }
 
 :root {
---text-color: white;
---bg-url: url(./assets/bg-mobile.jpg);
---stroke-color: rgba(255, 255, 255, 0.5);
---surface-color: rgba(255, 255, 255, 0.05);
---surface-color-hover: rgba(0, 0, 0, 0.02);
---highlight-color: rgba(255, 255, 255, 0.2);
---switch-bg-url: url(./assets/moonstars.svg);
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moonstars.svg);
 }
 
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
---surface-color: rgba(0, 0, 0, 0.05);
---surface-color-hover: rgba(0, 0, 0, 0.02);
---highlight-color: rgba(0, 0, 0, 0.1);
---switch-bg-url: url(./assets/sun.svg);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
@@ -42,19 +42,20 @@ fonte selecionada do endereço: https://fonts.google.com/specimen/Inter?query=in
 */
 
 body * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
 #container {
-  width: 360px;
+  /* para ficar responsivo em dispositivos com dimensoes pequenas*/
 
+  width: 100%;
+  max-width: 580px;
   /*
   a borda é utilizada para ajudar na orientação visual enquanto estamos trabalhando nas caixas, depois pode ser retirada linha da borda abaixo
 
   border: 1px solid red;
   */
-  
 
   /*
   margin-top: 56px;
@@ -71,13 +72,12 @@ body * {
 /* profile */
 
 #profile {
-text-align: center;
-padding: 24px;
+  text-align: center;
+  padding: 24px;
 }
 
 #profile img {
   width: 112px;
-  
 }
 
 #profile p {
@@ -115,13 +115,13 @@ padding: 24px;
 
 #switch span {
   display: block;
-width: 64px;
-height: 24px;
-background: var(--surface-color);
-border: 1px solid var(--stroke-color);
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
-border-radius: 9999px;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 /* links */
 
@@ -135,7 +135,6 @@ ul {
 }
 
 ul li a {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,19 +151,14 @@ ul li a {
   font-weight: 500;
 
   transition: background 0.2s;
-
 }
 
 ul li a:hover {
-
-background: var(--surface-color-hover);
-  border: 1,5px solid  var(--text-color);
-
-
+  background: var(--surface-color-hover);
+  border: 1, 5px solid var(--text-color);
 }
 
 #social-links {
-
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -176,21 +170,16 @@ background: var(--surface-color-hover);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px
-
-  transition background 0.2s;
+  padding: 16px transition background 0.2s;
   border-radius: 50%;
 }
 
 #social-links a:hover {
-background: var(--highlight-color);
-
+  background: var(--highlight-color);
 }
 
 footer {
-padding: 24px 0;
-text-align: center;
-font-size: 14px;
-
-
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
 }
